@@ -1,0 +1,48 @@
+{
+  "name": "env-leak-guard",
+  "version": "1.0.0",
+  "description": "Blazing fast zero-dependency scanner to detect leaked API keys, tokens, credentials, and database secrets in source code, build outputs, and git staging.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "bin": {
+    "env-leak-guard": "./bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "security",
+    "secret-scanner",
+    "secrets",
+    "api-keys",
+    "leak-detector",
+    "env",
+    "devops",
+    "ci-cd",
+    "pre-commit"
+  ],
+  "author": "vjymisal0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjymisal0/env-leak-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vjymisal0/env-leak-guard/issues"
+  },
+  "homepage": "https://github.com/vjymisal0/env-leak-guard#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}
