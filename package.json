@@ -1,6 +1,6 @@
 {
   "name": "env-leak-guard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Blazing fast zero-dependency scanner to detect leaked API keys, tokens, credentials, and database secrets in source code, build outputs, and git staging.",
   "type": "module",
   "main": "./src/index.js",
@@ -11,12 +11,14 @@
   "exports": {
     ".": {
       "types": "./src/index.d.ts",
-      "import": "./src/index.js"
-    }
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "src",
-    "bin"
+    "bin",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "test": "node --test test/*.test.js"
